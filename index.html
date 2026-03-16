@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Victor Possamai | Ebook para Investidores Iniciantes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Gold/Yellow accent color
+                        "background-light": "#f8fafc",
+                        "background-dark": "#020617",
+                        "accent-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Montserrat", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #020617;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBZdaizbuvZoscz_j0IqpuzaupGVj2v-BsJqf5Pp567VkMoarrR6hy8KCI90z58biIt95L1nCRxst4uEULBcJuFjQTSC_bWZmhtWB8RlwUXnBu3bjlL29Q180SrzE8AV4XBT0ukyhenGEX5SIZAtYEHcB3PnPJSTMKgyyGfViwvh4Y5qIYTAAVaaFl-Va5JPboRvWlG3PRZJJEboGhOTKai2E0twx_nIPD-RF6zvEFxZFUW3AMwY2C4_MTEwyu8vFi17gpSMdiXG44);
+            position: relative
+        }
+
+        .hero-pattern::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, rgba(2, 6, 23, 1) 100%);
+            pointer-events: none
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased">
+    <header
+        class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-primary rounded flex items-center justify-center text-background-dark font-bold text-xl">
+                        VP</div>
+                    <span class="font-display font-bold text-xl tracking-tight uppercase">Victor <span
+                            class="text-primary">Possamai</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="#">Home</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="#sobre">Sobre</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="#ebook">Ebook</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="#contato">Contato</a>
+                    <a class="bg-primary text-background-dark px-6 py-2 rounded font-bold text-sm uppercase tracking-wide hover:bg-opacity-90 transition-all"
+                        href="#download">Baixar Agora</a>
+                </nav>
+                <div class="md:hidden">
+                    <button class="p-2 text-slate-400"><span class="material-icons">menu</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern" id="hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4 border border-primary/20">Acesso
+                        Gratuito</span>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white leading-tight mb-6">
+                        Domine suas Finanças: <span class="text-primary">Ebook Gratuito</span> para Investidores
+                        Iniciantes
+                    </h1>
+                    <p class="text-lg text-slate-300 mb-8 max-w-xl">
+                        Descubra o caminho comprovado para sair da inércia e começar a construir seu patrimônio hoje
+                        mesmo, com estratégias práticas e seguras.
+                    </p>
+                    <div class="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 max-w-md shadow-2xl"
+                        id="download">
+                        <h3 class="text-white font-bold mb-4 text-lg">Receba o guia em seu e-mail:</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="sr-only">Nome Completo</label>
+                                <input
+                                    class="w-full px-4 py-3 bg-slate-800 border-slate-700 rounded-md focus:ring-primary focus:border-primary text-white"
+                                    placeholder="Seu nome completo" type="text" />
+                            </div>
+                            <div>
+                                <label class="sr-only">E-mail</label>
+                                <input
+                                    class="w-full px-4 py-3 bg-slate-800 border-slate-700 rounded-md focus:ring-primary focus:border-primary text-white"
+                                    placeholder="Seu Número com DDD" type="number" />
+                            </div>
+                            <button
+                                class="w-full bg-primary text-background-dark font-display font-extrabold py-4 rounded shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
+                                type="submit">
+                                <span class="material-icons text-xl">download</span>
+                                BAIXAR EBOOK AGORA
+                            </button>
+                        </form>
+                        <p class="text-[10px] text-slate-500 mt-4 text-center">Respeitamos sua privacidade. Seus dados
+                            estão seguros conosco.</p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+                        <img alt="Victor Possamai Professional Portrait"
+                            class="relative rounded-2xl shadow-2xl duration-700 w-full max-w-md border-b-4 border-primary"
+                            src="img/perfil.jpeg" />
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-background-dark border border-slate-700 p-4 rounded-lg shadow-xl hidden md:block">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-primary/20 p-2 rounded">
+                                    <span class="material-icons text-primary">verified_user</span>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold leading-tight">Victor Possamai</p>
+                                    <p class="text-xs text-slate-400">Educador Financeiro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-accent-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-extrabold mb-4">O que você vai aprender?</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 rounded-2xl bg-white dark:bg-background-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow group">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-icons">account_balance_wallet</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mentalidade Financeira</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Como organizar sua vida financeira do zero e criar o hábito de poupar mensalmente sem
+                        sacrifícios extremos.
+                    </p>
+                </div>
+                <div
+                    class="p-8 rounded-2xl bg-white dark:bg-background-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow group">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Renda Fixa e Variável</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Entenda de uma vez por todas as diferenças e como escolher os melhores ativos para o seu perfil
+                        de risco.
+                    </p>
+                </div>
+                <div
+                    class="p-8 rounded-2xl bg-white dark:bg-background-dark border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow group">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Segurança e Proteção</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Como criar sua reserva de emergência e proteger seu capital contra a inflação e oscilações do
+                        mercado.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="mt-20 grid lg:grid-cols-2 gap-12 items-center bg-slate-100 dark:bg-background-dark p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-slate-800">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3 overflow-hidden">
+                            <img alt="User 1"
+                                class="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-900"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDgwwUqIrs30svITsBCfjWKCcVsS57baAd5VACdMMHLduSbVbRAL3ERlhcar8nwFcb5Jmk3_dyRIm7x-6LB4muLbSG5SdfjS3M_KLZAS_Hamr9FaUp9d-0lCcp9eYqwfQzN12mHwx1t73oX6an2JWef5XhfdK3KnSmagMNmaL6KdfU61XlUEDdsGqGgA_BB_j8tbbOacdXnJSqe4PAvMlt2NpGLS4bpqvaKdg8iT18XVk3C4J4XIaSyaPathCoGZLNHqL2vhJFnMA" />
+                            <img alt="User 2"
+                                class="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-900"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAifL71qn0ZYnNqNZnhpoP11wVA-oea6cXOBI0s5mSPdCh376yDPfoPaJR7E45n062a6NIpM7U44lki67k3gMDLqYMdW_mictvtZe-oLyWGhflKghU6YP1Wav92EwAm3H7JYbNWMsUqhYdDfNUDYfkixoxILTogYrZ7TDdU9DbEzVx9kQ9UKzZqio-3qIOO2sAqTlNmBK1-vAA4yjuC53oSNQbG1jmCW5s4P0caoVta46gtW0tYcinLYmn9D1Ze_yddi0wGTZA284" />
+                            <img alt="User 3"
+                                class="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-900"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB66FH-BjFo8zGD2FrO-UEOaulFCWI56wjMIsH2vKwN8HQ3jSnoiwjeMobC7fBmtIqhzIxtgTi68nIvrmL0vcwhlCA2cWJjLvsIAxOhpllbnUiBfndHFpji7DTutyu5GjzBgMG-3xnb78urPeWT2X8JohGP22Yu-vKQsYeS2plhs-3zHr6ES5xFfP5Ext_bDbBkCngutZnCbRIbYohd9xG3MrlWVLWv-eUEjeXJJUqYW61ye2PMgO-CLoPXpdmgJa3gOJAlB-OExK0" />
+                            <div
+                                class="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-background-dark text-xs font-bold ring-2 ring-white dark:ring-slate-900">
+                                +5k</div>
+                        </div>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Junte-se a mais de 5.000
+                            pessoas que já baixaram o material.</p>
+                    </div>
+                    <blockquote class="text-xl italic text-slate-700 dark:text-slate-300 leading-relaxed">
+                        "Já tinha pensado em organizar minha vida financeira, já me achava bem organizada mas sabia que
+                        poderia melhorar nessa área.
+                        Achei transformadora a visão que o Victor me passou sobre guardar dinheiro com propósitos
+                        específicos, mesmo que pareçam mais distantes, como casamento e filhos. O poupar fica mais leve
+                        e empolgante, sinto que estou me preparando melhor para essas outras etapas da vida e gerando em
+                        fé o que ainda não é realidade mas um dia vai ser. Gostei muito da sensação de estar mais
+                        organizada e de estar trilhando um caminho melhor na área financeira.
+                        Acredito que constatei ainda mais que o planejamento não é apenas importante, mas também
+                        necessário."
+                    </blockquote>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-primary">
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                        </div>
+                        <span class="text-sm font-bold">— Amandha, Enfermeira/Professora Universitária</span>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                        </div>
+                        <div
+                            class="relative bg-slate-900 p-2 rounded-lg leading-none flex items-center divide-x divide-slate-600">
+                            <div class="flex items-center space-x-2 px-4 py-2">
+                                <span class="material-icons text-primary">picture_as_pdf</span>
+                                <span
+                                    class="text-slate-200 font-bold uppercase text-sm tracking-widest">Ebook_Investidor_V1.pdf</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-primary rounded flex items-center justify-center text-background-dark font-bold text-lg">
+                            VP</div>
+                        <span class="font-display font-bold text-lg tracking-tight uppercase text-white">Victor <span
+                                class="text-primary">Possamai</span></span>
+                    </div>
+                    <p class="text-xs max-w-sm text-center md:text-left">
+                        Sócio do Grupo Grafo Capital, hoje atuando com ênfase na área de Analise Financeira Estratégica
+                        para Pessoa Física e Head De Energia Renovável.
+
+                        Cursando Direito (Positivo), Cursando Economia (UNINTER) sendo Correspondente Bancário Completo
+                        (Certificação FEBRABAN) e Finanças Pessoais e Planejamento Financeiro (PUCRS), Como Organizar
+                        Planejamento Familiar, Planejamento de Aposentadoria, Planejamento Sucessório e Investimentos
+                        (FGV), Direito Contratual: Da Confiança à Promessa ao Contrato (HARVARD), Responsabilidade Civil
+                        e Danos atemporais (OAB), Ilícito Tributário (OAB). Autor do livro: Nascidos do Amor e Escritor
+                        Voluntário nos Ministérios Pão Diário.
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="#"><span class="sr-only">Instagram</span><svg
+                            class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z">
+                            </path>
+                        </svg></a>
+                    <a class="hover:text-primary transition-colors" href="#"><span class="sr-only">LinkedIn</span><svg
+                            class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                            </path>
+                        </svg></a>
+                    <a class="hover:text-primary transition-colors" href="#"><span class="sr-only">YouTube</span><svg
+                            class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                            </path>
+                        </svg></a>
+                </div>
+            </div>
+            <div
+                class="mt-8 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest font-bold">
+                <p>© 2026 Victor Possamai. Todos os direitos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a class="hover:text-white" href="#">Privacidade</a>
+                    <a class="hover:text-white" href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
