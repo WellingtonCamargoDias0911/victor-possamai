@@ -12,16 +12,17 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@700;800&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://grafocapital.com.br/favicon-32x32.png" />
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: "#D4AF37", // Gold/Yellow accent color
-                        "background-light": "#f8fafc",
-                        "background-dark": "#020617",
-                        "accent-dark": "#0f172a",
+                        primary: "#FFB703", // Gold/Yellow accent color
+                        "background-light": "#EAF4FF",
+                        "background-dark": "#0B1E4A",
+                        "accent-dark": "#09153A",
                     },
                     fontFamily: {
                         sans: ["Inter", "sans-serif"],
@@ -46,8 +47,8 @@
         }
 
         .hero-pattern {
-            background-color: #020617;
-            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBZdaizbuvZoscz_j0IqpuzaupGVj2v-BsJqf5Pp567VkMoarrR6hy8KCI90z58biIt95L1nCRxst4uEULBcJuFjQTSC_bWZmhtWB8RlwUXnBu3bjlL29Q180SrzE8AV4XBT0ukyhenGEX5SIZAtYEHcB3PnPJSTMKgyyGfViwvh4Y5qIYTAAVaaFl-Va5JPboRvWlG3PRZJJEboGhOTKai2E0twx_nIPD-RF6zvEFxZFUW3AMwY2C4_MTEwyu8vFi17gpSMdiXG44);
+            background-color: #0B1E4A;
+            background-image: linear-gradient(180deg, #0B1E4A 0%, #06173B 100%);
             position: relative
         }
 
@@ -61,21 +62,25 @@
             background: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, rgba(2, 6, 23, 1) 100%);
             pointer-events: none
         }
+
+        .particulas {
+            position: absolute;
+            inset: 0;
+        }
     </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased">
     <header
         class="fixed w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-background-dark font-bold text-xl">
-                        <img src="./img/logo_branca.png" alt="" class="w-9 h-9 object-contain rounded-full" />
-                    </div>
-                    <span class="font-display font-bold text-xl tracking-tight uppercase">Victor <span
-                            class="text-primary">Possamai</span></span>
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex justify-between items-center h-28">
+                <div class="flex items-center gap-6">
+                    <a href="https://grafocapital.com.br/" class="w-50 h-50 bg-transparent flex items-center justify-center mr-4">
+                        <img src="https://lp.grafocapital.com.br/wp-content/uploads/2025/08/image-removebg-preview.png"
+                            alt="Logo" class="w-50 h-50 object-contain" />
+                    </a>
+
                 </div>
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-wider"
@@ -94,6 +99,7 @@
         </div>
     </header>
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern" id="hero">
+        <div id="inicio-js" class="particulas"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
@@ -176,9 +182,9 @@
                 class="max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 md:p-10 shadow-sm">
                 <div class="flex items-center gap-4 mb-6">
                     <div
-                        class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background-dark font-bold text-2xl shadow-[0_8px_20px_rgba(20,20,20,0.35)]">
-                        <img src="./img/logo_branca.png" alt="" class="w-10 h-10 rounded-full object-contain" />
-                    </div>
+                        class="w-11 h-11 bg-primary rounded flex items-center justify-center text-background-dark font-bold text-xl">
+                            VP</div>
+                    
                     <div>
                         <h3 class="text-xl font-bold">Victor Possamai</h3>
                         <p class="text-sm text-slate-600 dark:text-slate-400">Educador Financeiro</p>
@@ -329,26 +335,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex flex-col items-center md:items-start">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div
-                            class="w-8 h-8 bg-primary rounded flex items-center justify-center text-background-dark font-bold text-lg">
-                            VP</div>
-                        <span class="font-display font-bold text-lg tracking-tight uppercase text-white">Victor <span
-                                class="text-primary">Possamai</span></span>
-                    </div>
+                    <a href="https://grafocapital.com.br/" class="flex items-center gap-2 mb-4">
+                        <img src="https://lp.grafocapital.com.br/wp-content/uploads/2025/08/image-removebg-preview.png"
+                            alt="Grafo Capital Logo" class="h-12 object-contain" />
+                    </a>
                     <div class="text-xs max-w-sm text-center md:text-left space-y-2">
-                        <p>Sócio do Grupo Grafo Capital e Membro do Conselho de Gestão, hoje atuando com ênfase na área
-                            de Planejamento Financeiro Estratégico para Pessoa Física e Head de Energia Renovável.</p>
-                        <p>Cursando Economia (UNINTER) sendo Correspondente Bancário Completo (Certificação FEBRABAN) e
-                            Finanças Pessoais e Planejamento Financeiro (PUCRS), Como Organizar Planejamento Familiar,
-                            Planejamento de Aposentadoria, Planejamento Sucessório e Investimentos (FGV).</p>
-                        <p>Cursando Direito (Positivo), com Certificações em Direito Contratual: Da Confiança à Promessa
-                            ao Contrato (HARVARD), Responsabilidade Civil e Danos Atemporais (OAB), Ilícito Tributário
-                            (OAB), Conceitos LGPD (OAB), membro e representante de Clube de Tribunal do Júri na
-                            Universidade Positivo.</p>
-                        <p>Escritor do livro: Nascidos do Amor e Escritor nos Ministérios Pão Diário.</p>
-                        <p>Embaixador do CONSEJUVBRASIL e representante de Curitiba/PR do Grupo Jovens na Política.</p>
-                        <p>Fundador e Supervisor Nacional de células do LIFE IN JESUS MOVEMENT.</p>
+                        <p>Somos uma assessoria de investimentos que busca simplificar toda a complexidade do mercado de investimentos e conectar o cliente ao que realmente importa.</p>
+                        <p>Formada por profissionais experientes com atuação em organizações corporativas e no segmento financeiro.</p>
+                        <p>Trabalhando com uma assessoria sempre visando o longo prazo, para cuidar do futuro de nossos clientes e um relacionamento duradouro.</p>
                     </div>
                 </div>
                 <div class="flex gap-6">
@@ -392,6 +386,33 @@
     </a>
 
     <script>
+
+        function iniciarParticles(id, quantidade) {
+            if (!document.getElementById(id)) return;
+            if (typeof particlesJS !== "function") return; // evita erro se lib não carregou
+            particlesJS(id, {
+                particles: {
+                    number: { value: quantidade, density: { enable: true, value_area: 800 } },
+                    color: { value: "#ffbf01" },
+                    shape: { type: "circle", stroke: { width: 0, color: "#000" } },
+                    opacity: { value: 0.2, random: true, anim: { enable: false } },
+                    size: { value: 4, random: true, anim: { enable: false } },
+                    line_linked: { enable: true, distance: 120, color: "#fff", opacity: 0.07, width: 1 },
+                    move: { enable: true, speed: 1, out_mode: "out" }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: { onhover: { enable: true, mode: "grab" }, resize: true },
+                    modes: { grab: { distance: 180, line_linked: { opacity: 0.01 } } }
+                },
+                retina_detect: true
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            iniciarParticles("inicio-js", 180);
+            iniciarParticles("particulas-js", 180);
+        });
         (function () {
             const form = document.getElementById("ebook-form");
             if (!form) return;
@@ -522,6 +543,7 @@
             updateState();
         })();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </body>
 
 </html>
