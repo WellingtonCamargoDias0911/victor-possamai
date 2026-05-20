@@ -118,8 +118,9 @@
                     <div class="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 max-w-md shadow-2xl"
                         id="download">
                         <h3 class="text-white font-bold mb-4 text-lg">Receba o guia pelo seu telefone:</h3>
-                        <form class="space-y-4" id="ebook-form" action="https://formspree.io/f/xbdzqzze" method="POST"
-                            data-redirect-url="https://drive.google.com/file/d/1eRjw8TG9l3V8Mw1OAFX0nc4HXQmXWaFj/view">
+                        <form class="space-y-4" id="ebook-form" action="" method="POST"
+                            data-redirect-url="https://drive.google.com/file/d/1eRjw8TG9l3V8Mw1OAFX0nc4HXQmXWaFj/view"
+                            data-sheet-script-url="https://script.google.com/macros/s/AKfycbwPaIPpF3BG4y4-xFv6apfXd4BN-YLFQNNHlHrqBDf15atf9EzAK5frmZC-fjcjNBDw/exec">
                             <div>
                                 <label class="sr-only">Nome Completo</label>
                                 <input
@@ -417,6 +418,7 @@
             const submitBtn = document.getElementById("ebook-submit");
             const feedbackMsg = document.getElementById("ebook-feedback");
             const redirectUrl = form.dataset.redirectUrl || "https://drive.google.com/file/d/1eRjw8TG9l3V8Mw1OAFX0nc4HXQmXWaFj/view";
+            const sheetScriptUrl = (form.dataset.sheetScriptUrl || "").trim();
             const defaultButtonContent = submitBtn ? submitBtn.innerHTML : "";
             if (!nameInput || !phoneInput || !submitBtn) return;
 
@@ -509,22 +511,29 @@
                     return;
                 }
 
+                if (!sheetScriptUrl) {
+                    setFeedback("Configure a URL do Google Apps Script no atributo data-sheet-script-url do formulario.", "error");
+                    updateState();
+                    return;
+                }
+
                 setFeedback("", "error");
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<span class="material-icons text-xl">hourglass_top</span> ENVIANDO...';
 
                 try {
-                    const response = await fetch(form.action, {
-                        method: form.method,
-                        body: new FormData(form),
-                        headers: {
-                            Accept: "application/json",
-                        },
+                    const payload = new URLSearchParams({
+                        nome: nameInput.value.trim(),
+                        phone: getPhoneDigits(),
+                        pagina: window.location.href,
+                        origem: "ebook-form",
                     });
 
-                    if (!response.ok) {
-                        throw new Error("Falha no envio");
-                    }
+                    await fetch(sheetScriptUrl, {
+                        method: "POST",
+                        mode: "no-cors",
+                        body: payload,
+                    });
 
                     setFeedback("Enviado com sucesso. Redirecionando...", "success");
                     window.location.href = redirectUrl;
